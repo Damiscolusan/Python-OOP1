@@ -27,10 +27,7 @@ class Pizza():
                 return ''  # use return to print an empty line  
     
                 
-class CustomPizza(Pizza):
-    def __init__(self, name, price, ingredients, vegetarians=False):
-         super().__init__(name, price, ingredients, vegetarians)
-                 
+                
                 
    
 pizzas=[ Pizza('4cheese',8.98,('blue cheese','brie','emmental','mozarella'),True),
@@ -39,12 +36,16 @@ pizzas=[ Pizza('4cheese',8.98,('blue cheese','brie','emmental','mozarella'),True
         Pizza('Vegetarian',5.93,('Flour', 'blue cheese','Tofu','Mushrooms','Iru'), True)
         ]
 
+# 
+    
+# Let's sort the Pizza
 
 def pizza_sort(e):
-    return e.price                           
+    # return e.name  # try e.price  len(e.ingredients)
+    return e.price                           # for sorting in this format this is just how it works
 
 pizzas.sort(key=pizza_sort, reverse=True)
 
-for i in pizzas:                       
+for i in pizzas:                       # Display sorted pizzas
     print (i.display())        
-# check his udemy coontent
+

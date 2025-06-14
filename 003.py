@@ -1,25 +1,24 @@
-class Monster():
-    # attributes
-    health = 90
-    energy = 40
+class Pizza():
+    def __init__(self, name, price):
+        self.name = name
+        self.price= price
 
-    #methods 
-    def attack(self,amount):
-        print('The monster has attacked')
-        print(f'About {amount}% level of damage was dealt')
-        monster.energy+=20
-        print("The new monster's energy is now " + str(monster.energy)+ '%')   # You can also use self
-        
-    def move(self, speed):
-        print()
-        print(f'The monster has moved')
-        print(f"It has a speed of {speed}m/s")
-    
-    
-monster =Monster()
-monster.attack(40) 
-monster.move(20)
+pizzas =[
+    Pizza('Calzone', 8), 
+    Pizza('4 cheese', 9.5),
+    Pizza('Hawai', 10)
+]                
+#Let'sa say I want to create a list for pizza names
+# pizza_names =[]
+# for i in pizzas:
+#     pizza_names.append(i.name)
 
+# How to do above in one line
+# pizzas_names =[i.name for i in pizzas] 
 
+#means I take all the items in pizzas which is repd by 'i'  and I am going to add i.name in 'i'
+# which is the names of all the pizzas
 
-# For any kind of method, you need a reference to the class as first parameter
+pizzas_names =[i.name for i in pizzas if len(i.name)>5] 
+# only add the item if len(i.name)>5
+print(pizzas_names)
